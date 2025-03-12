@@ -84,12 +84,13 @@ end
 
 melody 0
 
-play :c5
-sleep 0.8
-play :eb5
-sleep 0.8
-play :g5
-sleep 0.8
+rise = [:c5, :eb5, :g5];
+h = 0
+3.times do
+  play (rise [h])
+  sleep 0.8
+  h = h + 1
+end
 
 melody 24
 
@@ -102,4 +103,3 @@ sleep 0.8
 
 
 sample hate, amp: 4
-sleep 4
